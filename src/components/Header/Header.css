@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #282c34;
+    padding: 10px 20px;
+  }
+  
+  .header-link {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-link:hover {
+    text-decoration: underline;
+  }
+  
+  .header-link svg {
+    margin-right: 5px;
+  }
+  

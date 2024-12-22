@@ -1,0 +1,33 @@
+.home {
+    text-align: center;
+  }
+  
+  .boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .box {
+    background: #61dafb;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+  }
+  
+  .response {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
