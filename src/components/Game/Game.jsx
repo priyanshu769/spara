@@ -3,16 +3,16 @@ import "./Game.css";
 
 export const Game = () => {
   const questions = [
-    "Is she beautiful?",
-    "Go talk to her?",
+    { question: "Is she beautiful?", options: { one: "She is hella pretty!", two: "Her style stands out." } },
+    { question: "Go talk to her?", options: { one: "On My Way!", two: "Let her be in peace." } },
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
 
-  const handleAnswer = (answer) => {
-    setAnswers([...answers, { question: questions[currentQuestionIndex], answer }]);
-    if (currentQuestionIndex < questions.length - 1) {
+  const handleAnswer = (questionIndex, answer) => {
+    setAnswers([...answers, { question: questions[questionIndex].question, answer: answer }]);
+    if (questionIndex < questions.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
   };
@@ -21,9 +21,9 @@ export const Game = () => {
     <div className="game">
       {currentQuestionIndex < questions.length ? (
         <div className="question">
-          <p>{questions[currentQuestionIndex]}</p>
-          <button onClick={() => handleAnswer("Yes")}>Yes</button>
-          <button onClick={() => handleAnswer("No")}>No</button>
+          <p>{questions[currentQuestionIndex].question}</p>
+          <button onClick={() => handleAnswer(currentQuestionIndex, questions[currentQuestionIndex].options.one)}>{questions[currentQuestionIndex].options.one}</button>
+          <button onClick={() => handleAnswer(currentQuestionIndex, questions[currentQuestionIndex].options.two)}>{questions[currentQuestionIndex].options.two}</button>
         </div>
       ) : (
         <p>End of questions</p>
