@@ -1,0 +1,27 @@
+.game {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #61dafb;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background: #21a1f1;
+  }
+  
+  .answers {
+    margin-top: 20px;
+  }
+  
